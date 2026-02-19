@@ -1,0 +1,42 @@
+methods:
+-------
+index - индекс первого встречающегося элемента
+count - считает
+split - делит стринг на части и добавляет в лист
+startswith - boolean
+endswith - boolean
+strip - стирает с конца и начала стринга
+removeprefix - стирает с начала стринга 
+removesuffix - стирает с конца стринга
+len - считает кол-во символов
+replace  - заменить символы; (old 'string', new 'string', count (int))
+
+task 1
+----
+994552918195
++994552918195
+0552918195
+552918195
++994 55 291 81 95
+055 291 81 95
+
+55, 99, 50, 51, 10, 70, 77
+
+моё решение:
+number = input('Enter number:')
+number = number.replace(' ', '')
+
+if 13 < len(number) < 9:
+    print("Enter valid phone number")
+
+prefix = '+994'
+operators = ['50', '55', '51', '99', '10', '70', '77']
+numDigits = number[-7:]
+number = number.removesuffix(numDigits)
+numOperator = number[-2:]
+
+if numOperator in operators:
+    validatedNumber = prefix + numOperator + numDigits
+    print("Phone number is: " + validatedNumber)
+else:
+    print("Enter valid phone number")
