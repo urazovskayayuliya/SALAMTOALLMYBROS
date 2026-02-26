@@ -1,0 +1,12 @@
+abs() - модуль
+pow() - степень либо (3**4)
+round() - округление до целого
+а//3 - возвращает целую часть от деления
+% - возвращает остаток от деления
+format([fill][align][width][.precision][type]), f"{variable:02b}" number:şərtlər.
+  cимвол< cимвол^ cимвол>, 2b-двоичная система, 12b двенадцатеричная с пробелами вместо недостающих символов, 012b с нулями вместо недостающих..
+ord() - to ascii
+chr() - from ascii to character
+join() 
+int.to_bytes() int.from_bytes()
+str.encode str.decode
