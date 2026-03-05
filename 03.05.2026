@@ -11,3 +11,36 @@ database master , slave, replication; failover, binary log, replication lag, syn
 sql injection
 database indexing; update insert padaet select bistree; upsert
 data sharding
+
+task (moe reshenie):
+
+listNum = []
+listPrint = []
+for i in range(9):
+    listNum.append(input("Enter number:"))
+
+for i in listNum:
+    for i in listNum:
+        if int(i) % 2 == 1:
+            listPrint.append('*')
+        else:
+            listPrint.append(int(i))
+def printList():
+    print(listPrint[0],listPrint[1],listPrint[2])
+    print(listPrint[3],listPrint[4],listPrint[5])
+    print(listPrint[6],listPrint[7],listPrint[8])
+
+printList()
+while (True):
+    x = input("Enter your number: ")
+    if x in listNum:
+        if int(x)%2==1:
+            index = listNum.index(x)
+            listPrint.pop(index)
+            listPrint.insert(index, x)
+            print("Found")
+        else:
+            print("It should be an odd number")
+    else:
+        print("Try again")
+    printList()
