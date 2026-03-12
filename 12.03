@@ -12,4 +12,9 @@ set - O(1) emeliyyatdir daha yuksek netice verir, hashler de sureti artirir. big
 hash('value') - funksiya
 в сете с числами хеши получаются одинаковые, поэтому сет принтуется очередно
 -------------------
-B-Tree index, Composite index, Covered index
+B-Tree index 
+Composite index
+- если индексация по age-status, запрос надо посылать с такой же очередностью, иначе индекс работать не будет
+- но можно послать запрос с одной частью индекса без другой (age bez statusa)
+Covered index
+distribute index
