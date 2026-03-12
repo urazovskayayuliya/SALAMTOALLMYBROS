@@ -1,0 +1,15 @@
+12/03
+set: unordered, non-indexed, duplicate values silinir, keyler hash-lenir
+a = {True, 'value' 3434}
+b = {'abc', 123, 3434}
+a.add('new value')
+pop рандомно сотрет потому что unordered
+a.union(b) - соединяет два сета
+a.difference(b) - принтует неодинаковые элементы (которые есть в а, нет в б)
+a.remove() - если элемента нет будет ошибка
+a.discard() - если элемента нет ошибки не будет
+set - O(1) emeliyyatdir daha yuksek netice verir, hashler de sureti artirir. big O notation
+hash('value') - funksiya
+в сете с числами хеши получаются одинаковые, поэтому сет принтуется очередно
+-------------------
+B-Tree index, Composite index, Covered index
