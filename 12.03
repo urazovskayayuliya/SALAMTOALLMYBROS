@@ -18,3 +18,6 @@ Composite index
 - но можно послать запрос с одной частью индекса без другой (age bez statusa)
 Covered index
 distribute index
+--------
+latency (gecikme)
+p99 p90 p95
