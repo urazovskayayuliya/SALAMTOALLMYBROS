@@ -1,4 +1,4 @@
-03/05
+05/03
 append
 insert(index, object)
 pop - стирает элемент с конца
