@@ -12,12 +12,21 @@ set - O(1) emeliyyatdir daha yuksek netice verir, hashler de sureti artirir. big
 hash('value') - funksiya
 в сете с числами хеши получаются одинаковые, поэтому сет принтуется очередно
 -------------------
-B-Tree index 
-Composite index
+B-Tree index
+
+Composite index 
+- an index on two or more columns of a table. Unlike single-column indices, the order of columns in a composite index is crucial for its effectiveness.
 - если индексация по age-status, запрос надо посылать с такой же очередностью, иначе индекс работать не будет
 - но можно послать запрос с одной частью индекса без другой (age bez statusa)
+
 Covered index
-distribute index
+- includes all the columns needed to answer a specific query, so we can retrieve the required data directly from the index 
+without having to access the underlying table.
+When a query is executed, the database optimizer checks if there's an index that covers all the columns referenced in the SELECT, WHERE, JOIN, or ORDER BY clauses.
+If such an index exists (a covering index), the database can fetch the data solely from the index, 
+which is typically faster because indexes are smaller and more optimized for read operations than full tables.
+
+Distribute index
 --------
 latency (gecikme)
 p99 p90 p95
