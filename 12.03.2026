@@ -1,5 +1,7 @@
 12/03
 set: unordered, non-indexed, duplicate values silinir, keyler hash-lenir
+unlike lists, sets are always fast at: adding items, removing items, and checking whether an item is contained within a set.
+
 a = {True, 'value' 3434}
 b = {'abc', 123, 3434}
 a.add('new value')
