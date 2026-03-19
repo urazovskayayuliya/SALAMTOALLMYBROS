@@ -1,0 +1,10 @@
+tuple
+append, del
+----
+dictionary
+d = {'name': 'John', 'surname': 'Pork'}
+print(d['email']) -> error
+.get('email') -> no error
+print(d.keys()), d.values(), d.items (key: value)
+d.pop() -> to erase an element
+d.clear -> erase everything
