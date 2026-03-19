@@ -8,3 +8,29 @@ print(d['email']) -> error
 print(d.keys()), d.values(), d.items (key: value)
 d.pop() -> to erase an element
 d.clear -> erase everything
+
+task: 
+dict = {}
+keys=[]
+values=[]
+keyString = input("enter keys:")
+keys = keyString.split(',')
+print(keys)
+while True:
+    if len(set(keys)) != len(keys):
+        print("enter unique keys!")
+        keyString = input("enter keys:")
+        keys = keyString.split(',')
+        print(keys)
+    else:
+        break
+while True:
+    print("enter " + str(len(keys)) + " values")
+    values = input("enter values:")
+    values = values.split(',')
+    if len(values) == len(keys):
+        break
+        
+for i in range (0, len(keys)):
+    dict[keys[i]] = values[i]
+print(dict)
