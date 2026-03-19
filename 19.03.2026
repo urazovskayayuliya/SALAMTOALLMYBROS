@@ -34,3 +34,6 @@ while True:
 for i in range (0, len(keys)):
     dict[keys[i]] = values[i]
 print(dict)
+---------------
+database bottleneck
+load balancer
