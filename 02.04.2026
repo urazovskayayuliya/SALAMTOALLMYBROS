@@ -1,0 +1,86 @@
+functions and exceptions 
+positioned, named arguments: def test(x, y) -> test(y=56, x=34)
+def test(*args) сколько угодно аргументов. tuple sekilde oturulur
+**kwargs dictionary kimi qebulur sonsuza qeder uzada bilirik
+
+после позитионед аргумента если пишем неймд аргумент, то нельзя будет добавлять снова позитионед
+x=5
+def func():
+  global x
+  x=6
+  print(x) -> везде x станет 6, даже если принтить х вне функции
+def test():
+  pass - чтобы оставить функцию на время пустой
+
+  try:
+    ...
+  except:
+    ...
+try:
+  a=5
+  b='salam'
+  c=a/b
+except TypeError as e:
+  print("...")
+except ZeroDivisionError as e:
+  print("...")
+except:
+  print("other error")
+finally:
+  print("This line will always print out")
+
+  module - как класс в джаве
+---------------------
+Files
+r (read), w (write), a (sonuna elave edir, append), r+, a+, w+
+file = open('test.txt', 'r')
+print(file.read())
+w+ - file hem yoxdursa yaradir, hem ona yazmaq olur, hem onu oxumaq
+file.seek(0) - moves cursor to the beginning, seek(2) to the end etc.
+file.tell() - tells where the cursor is right now как индекс стринга
+seek(file.tell()-какоеточисло) - поместит курсор на нужный индекс и можно будет например что то написать: file.write
+readlines - faylda olan setrleri duzur liste. RAMi doldurmamaq ucun liste duzub loopnan printib oxuya bilerik
+writelines(['...\n', '....\n'])
+flush() - storage melumat yazilir, RAMi bosaldirir
+truncate(0) - baslangicdan her seyi silir
+close() - avtomatik Rami bosaldir storage ve fayli baglayir
+
+ozu avtomatik file acir ve baglayir -
+with open('test.txt', 'r+') as f:
+  write...
+  read...
+
+import os
+os.remove('test.txt') - delete file
+os.makedirs('logs', exist_ok=True) - create a directory(folder), cant create folders with same name, to bypass the error use exist_ok
+--------------
+task:
+
+import datetime as dt
+import os
+def makeLog():
+    timeNow = (dt.datetime.now())
+    folder = f'Logs/{timeNow.hour}'
+    os.makedirs(folder, exist_ok=True)
+    file = open(f"{folder}/{timeNow.minute}.txt", 'w+')
+    file.write(f"writing down-{timeNow}")
+    file.close()
+
+makeLog()
+def printLogs(hour, minute1, minute2):
+    folder = f"Logs/{hour}"
+    interval = []
+    for i in range (minute2-minute1+1):
+        interval.append(minute1)
+        minute1 = minute1+1
+    for i in interval:
+        try:
+            file = open(folder + "/" + f"{i}.txt", 'r')
+            print(f"Printing log {i}: " + file.read())
+            file.close()
+        except FileNotFoundError as e:
+            print(f"Log {i} not found")
+printLogs(10, 52, 57)
+---------------
+pip install package-name
+создать свой package и загрузить в pypi
